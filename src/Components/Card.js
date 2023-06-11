@@ -1,7 +1,7 @@
 import './Card.css';
 
 function Card(){
-    return ();
+    return (<div className='box'></div>);
 }
 
 export default Card;
