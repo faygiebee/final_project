@@ -2,7 +2,14 @@ import './Table.css'
 
 
 function Table(){
-    return ()
+    return (<table>
+<TableTitleRow></TableTitleRow>
+<TableRow></TableRow>
+<TableRow></TableRow>
+<TableRow></TableRow>
+<TableRow></TableRow>
+
+    </table>)
 }
 
 

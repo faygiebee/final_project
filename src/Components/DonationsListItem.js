@@ -7,7 +7,7 @@ function DonationsListItem() {
     <div className={"className"}>
       <BulletPoint className={"label__color second"}></BulletPoint>
       <div class="label">
-        <div class="label__color second"></div>
+        <div class={"label__color second"}> </div>
         <p>{category}</p>
       </div>
       <NumSmall></NumSmall>

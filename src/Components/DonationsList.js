@@ -1,7 +1,15 @@
 import './DonationsList.css'
+import DonationsListItem from './DonationsListItem';
 
 function DonationsList (){
-    return ()
+    return (<>
+    
+    <DonationsListItem></DonationsListItem>
+    <DonationsListItem></DonationsListItem>
+    <DonationsListItem></DonationsListItem>
+    <DonationsListItem></DonationsListItem>
+    
+    </>)
 }
 
 
