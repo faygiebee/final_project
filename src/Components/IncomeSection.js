@@ -1,7 +1,18 @@
-import './IncomeSection.css'
+import Amount from "./Amount";
+import "./IncomeSection.css";
+import SubTitle from "./SubTitle";
 
-function IncomeSection(){
-    return()
+function IncomeSection() {
+  return (
+    <>
+      <div>
+        <SubTitle></SubTitle>
+        <Icon></Icon>
+      </div>
+      <Amount></Amount>
+      <Comment></Comment>
+    </>
+  );
 }
 
 export default IncomeSection;

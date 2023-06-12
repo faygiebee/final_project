@@ -1,5 +1,5 @@
 import './Button.css';
-import './icon.js';
+import './Icon.js';
 import './ButtonTitle.js';
 
 function Button(){

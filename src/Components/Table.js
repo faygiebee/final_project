@@ -2,7 +2,7 @@ import './Table.css'
 
 
 function Table(){
-    return (<table>
+    return (<table className ='transaction-history'>
 <TableTitleRow></TableTitleRow>
 <TableRow></TableRow>
 <TableRow></TableRow>

@@ -2,7 +2,7 @@ import './DonationsHistoryList.css';
 
 
 function DonationsHistoryList(){
-    return();
+    return(<Table></Table>);
 }
 
 export default DonationsHistoryList;

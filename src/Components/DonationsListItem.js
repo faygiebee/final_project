@@ -4,9 +4,9 @@ import NumSmall from "./NumSmall";
 
 function DonationsListItem() {
   return (
-    <div className={"className"}>
-      <BulletPoint className={"label__color second"}></BulletPoint>
+    <div className="pie-chart__labels-item">
       <div class="label">
+      <BulletPoint className={"label__color second"}></BulletPoint>
         <div class={"label__color second"}> </div>
         <p>{category}</p>
       </div>

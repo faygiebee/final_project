@@ -8,7 +8,7 @@ function DonationsList (){
     <DonationsListItem></DonationsListItem>
     <DonationsListItem></DonationsListItem>
     <DonationsListItem></DonationsListItem>
-    
+
     </>)
 }
 

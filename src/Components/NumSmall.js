@@ -2,7 +2,7 @@ import './NumSmall.css';
 
 
 function NumSmall (){
-    return ()
+    return (<p>{currenySymbol}{number}</p>)
 }
 
 

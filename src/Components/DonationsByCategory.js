@@ -7,7 +7,7 @@ import PieChart from "./PieChart";
 
 function DonationsByCategory() {
   return (
-    <div className="box spending-box">
+    <div className="spending-box">
       <Card>
         <SubTitle></SubTitle>
         <PieChart></PieChart>

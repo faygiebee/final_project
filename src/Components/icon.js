@@ -1,7 +1,7 @@
-import './icon.css'
+import './Icon.css'
 
 
-function icon(){
+function Icon(){
  return ();
 }
-export default icon;
+export default Icon;
