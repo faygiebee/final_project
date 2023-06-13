@@ -1,9 +1,19 @@
-.user-name{
 
-}
-.user-nav{
-
-}
-.user-name{
-    
-}
+.user-nav,
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    margin: 0 37px 0 12px;
+  }
+  
+  .user-image {
+    height: 44px;
+    width: 44px;
+  }

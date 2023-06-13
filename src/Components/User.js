@@ -1,6 +1,7 @@
 import DropDown from './DropDown';
 import SubTitle from './SubTitle';
 import './User.css'
+import Icon from './Icon';
 
 function User(){
     return (<div className='user-nav'>

@@ -1,0 +1,13 @@
+tr > td {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -2%;
+    padding: 8px 0;
+  }
+  
+  tr > td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  

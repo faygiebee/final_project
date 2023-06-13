@@ -7,13 +7,13 @@ import Button from './Button';
 
 function DonationsHistory(){
     return (
-    <Card className=" transaction-box">
+    <div className=" box transaction-box">
     <SubTitle></SubTitle>
     <DonationsHistoryList></DonationsHistoryList>
     <div class="footer-container ">
     <Button></Button>
     </div>
-  </Card>);
+  </div>);
 }
 
 

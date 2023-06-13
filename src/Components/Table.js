@@ -1,4 +1,6 @@
 import './Table.css'
+import TableTitleRow from './TableTitleRow';
+import TableRow from './TableRow';
 
 
 function Table(){

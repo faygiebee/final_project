@@ -7,18 +7,18 @@ import PieChart from "./PieChart";
 
 function DonationsByCategory() {
   return (
-    <div className="spending-box">
-      <Card>
+    <div className="box spending-box">
+      <div>
         <SubTitle></SubTitle>
         <PieChart></PieChart>
         <div class="overall-spending">
           <h4>Overall</h4>
-          <Amount>{amount}</Amount>
+          <Amount>amount</Amount>
         </div>
         <div class="pie-chart__labels">
           <DonationsList></DonationsList>
         </div>
-      </Card>
+      </div>
     </div>
   );
 }

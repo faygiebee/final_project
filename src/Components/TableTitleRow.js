@@ -6,7 +6,7 @@ import './TableTitleRow.css';
 function TableTitleRow() {
     return (
         <tr>
-            <th>{Donations}</th>
+            <th>Donations</th>
             <th>
                 Date
                 <DropDown></DropDown>
@@ -15,7 +15,7 @@ function TableTitleRow() {
                 <DropDown></DropDown>
             </th>
 
-            <th>{Category}</th>
+            <th>Category</th>
         </tr>
     );
 

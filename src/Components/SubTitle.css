@@ -1,6 +1,23 @@
-.section-header{
 
-}
-.header-container{
-    
-}
+.header-container {
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  
+    font-weight: 600;
+    letter-spacing: -2%;
+  }
+  
+
+  
+  .section-header {
+    line-height: 24px;
+    font-size: 16px;
+  }
+  
+  .header-container h3 {
+    line-height: 21px;
+    font-size: 14px;
+  }

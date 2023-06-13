@@ -1,19 +1,40 @@
-.container{
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.main-content{}
-.date{
 
+html,
+body {
+  height: 100%;
 }
-.top-container{
 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 100vh;
 }
-.bottom-container{
+.container {
+  display: flex;
+  height: 100%;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+}
 
+.bottom-container {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background-color: #f3f5f7;
 }
-.bottom-container__left{
+.bottom-container__left {
+  width: 70%;
+}
 
-}
-.bottom-container__right{
-  
+.bottom-container__right {
+  width: 30%;
 }

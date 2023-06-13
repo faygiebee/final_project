@@ -2,6 +2,6 @@ import './Icon.css'
 
 
 function Icon(){
- return ();
+ return (<p></p>);
 }
 export default Icon;

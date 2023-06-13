@@ -1,3 +1,14 @@
-.transaction-history{
-    
-}
+
+
+  .transaction-history {
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    margin-top: 24px;
+  }
+  tr > td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  

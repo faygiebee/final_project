@@ -1,4 +1,7 @@
-.percentage-increase{
-
-}
-.percentage-decrease{}
+.percentage-increase {
+    color: #7fb519;
+  }
+  
+  .percentage-decrease {
+    color: #ff4423;
+  }

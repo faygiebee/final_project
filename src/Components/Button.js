@@ -1,6 +1,5 @@
 import './Button.css';
 import './Icon.js';
-import './ButtonTitle.js';
 
 function Button(){
     return (<>

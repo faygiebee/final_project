@@ -1,6 +1,21 @@
-.pie-chart{
-
-}
-#my-pie-chart{
-    
-}
+.pie-chart {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #my-pie-chart {
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #ffacc8 0,
+      15.34%,
+      #cc6ff8 15.34% 26.21%,
+      #7c5cfc 26.21% 42.37%,
+      #eb7ca6 42.37% 100%
+    );
+  }
+  

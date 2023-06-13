@@ -1,5 +1,30 @@
-.total-box
 
-.total-box__left
 
-.total-box__right
+.total-box {
+    display: flex;
+  }
+  
+  .total-box__left {
+    border-right: 1px solid #f0f0f0;
+    flex: 1;
+  }
+  
+  .total-box__right {
+    flex: 1;
+  }
+  .total-box__left {
+    margin-right: 24px;
+  }
+  
+  
+  
+  .total-box p,
+  
+  .box p {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #90a3bf;
+  }
+  
