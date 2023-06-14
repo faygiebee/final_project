@@ -1,8 +1,8 @@
 import './Amount.css';
 
-function Amount(){
+function Amount(props){
     return (<>
-        <h1 className='price'> number <span className='price-currency'>(USD)</span> </h1>
+        <h1 className='price'>{props.amount}<span className='price-currency'>(USD)</span> </h1>
         </>
     );
 }

@@ -5,10 +5,22 @@ import Card from "./Card";
 function TotalIncome() {
   return (
     <div className="box total-box">
-      <p>
-        <IncomeSection className="total-box__left"></IncomeSection>  </p>
-       <p> <IncomeSection className="total-box__right"></IncomeSection></p>
-      
+      <div className="total-box__left">
+        <IncomeSection
+          commentClass={"percentage-increase"}
+          comment={"20%"}
+          amount={"$583,530.00"}
+          title={"Total Income"}
+        ></IncomeSection>
+      </div>
+      <div className="total-box__right">
+        <IncomeSection
+          commentClass={"percentage-decrease"}
+          comment={"10%"}
+          amount={"$50,530.00"}
+          title={"Total Donations"}
+        ></IncomeSection>
+      </div>
     </div>
   );
 }

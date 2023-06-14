@@ -2,6 +2,15 @@ import NavBar from "./NavBar";
 import "./SideBar.css";
 
 function SideBar() {
+  const navButton = [
+    "Dashboard",
+    "Income",
+    "Donations",
+    "Inbox",
+    "Settings",
+    "logout",
+  ];
+  
   return (
     <nav className="sidebar">
       <div>
@@ -10,11 +19,9 @@ function SideBar() {
         </div>
 
         <ul className="side-nav">
-          <NavBar></NavBar>
-          <NavBar></NavBar>
-          <NavBar></NavBar>
-          <NavBar></NavBar>
-          <NavBar></NavBar>
+          {navButton.map(function (button) {
+            return <NavBar button={button}></NavBar>;
+          })}
         </ul>
         <ul>
           <NavBar className='last-item"'></NavBar>

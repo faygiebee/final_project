@@ -7,3 +7,12 @@
   .box  {
     font-size: 14px;
   }
+
+    
+.transaction-history {
+  width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  margin-top: 24px;
+}
+  

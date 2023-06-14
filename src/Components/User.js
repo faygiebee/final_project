@@ -7,7 +7,7 @@ function User(){
     return (<div className='user-nav'>
     <div className='user-info'>
     <Icon></Icon>
-    <SubTitle className="user-name"></SubTitle>
+    <span className="user-name">Faigy</span>
     <Icon></Icon>
     <span>Log Out</span>
     </div>

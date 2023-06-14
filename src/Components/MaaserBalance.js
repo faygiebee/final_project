@@ -5,12 +5,12 @@ import SubTitle from './SubTitle';
 import Comment from './Comment';
 import Card from './Card';
 
-function MaaserBalance(){
+function MaaserBalance(props){
     return (<div className='box'>
 
-        <SubTitle></SubTitle>
-        <Amount></Amount>
-        <Comment></Comment>
+        <SubTitle title={"Your Ma'aser Balance"}></SubTitle>
+        <Amount amount={"$7823"}></Amount>
+        <Comment longComment={"From Jan 01, 2023 to May 24, 2023"}></Comment>
         <div className="button-box"><PurpleButton></PurpleButton></div>
     </div>)
 }

@@ -1,9 +1,9 @@
 import "./SubTitle.css";
 
-function SubTitle() {
+function SubTitle(props) {
   return (
     <div class="header-container">
-      <h3 class="section-header">titleName</h3>
+      <h3 class="section-header">{props.title}</h3>
     </div>
   );
 }

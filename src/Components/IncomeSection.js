@@ -4,15 +4,15 @@ import SubTitle from "./SubTitle";
 import Icon from "./Icon";
 import Comment from "./Comment";
 
-function IncomeSection() {
+function IncomeSection(props) {
   return (
     <>
       <div>
-        <SubTitle></SubTitle>
+        <SubTitle title={props.title}></SubTitle>
         <Icon></Icon>
       </div>
-      <Amount></Amount>
-      <Comment></Comment>
+      <Amount amount ={props.amount}></Amount>
+      <Comment commentClass={props.commentClass} comment ={props.comment}></Comment>
     </>
   );
 }

@@ -2,15 +2,16 @@ import BulletPoint from "./BulletPoint";
 import "./DonationsListItem.css";
 import NumSmall from "./NumSmall";
 
-function DonationsListItem() {
+function DonationsListItem(props) {
+ 
   return (
     <div className="pie-chart__labels-item">
       <div class="label">
-      <BulletPoint className={"label__color second"}></BulletPoint>
+      <BulletPoint class={props.charity}></BulletPoint>
         <div class={"label__color second"}> </div>
-        <p>category</p>
+        <p>{props.charity}</p>
       </div>
-      <NumSmall></NumSmall>
+      <NumSmall amount={props.amount}></NumSmall>
     </div>
   );
 }

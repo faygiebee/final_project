@@ -1,20 +1,27 @@
-import './DonationsHistory.css';
-import Card from './Card';
-import SubTitle from './SubTitle';
-import DonationsHistoryList from './DonationsHistoryList';
-import Button from './Button';
+import "./DonationsHistory.css";
+import Card from "./Card";
+import SubTitle from "./SubTitle";
+import DonationsHistoryList from "./DonationsHistoryList";
+import Button from "./Button";
 
+function DonationsHistory(props) {
 
-function DonationsHistory(){
-    return (
+  console.log("Inside Donations History");
+  console.log(props.history);
+ 
+  return (
     <div className=" box transaction-box">
-    <SubTitle></SubTitle>
-    <DonationsHistoryList></DonationsHistoryList>
-    <div class="footer-container ">
-    <Button></Button>
+      <SubTitle title={props.title}></SubTitle>
+      <DonationsHistoryList
+        title1={props.title1}
+        title2={props.title2}
+        history={props.history}
+      ></DonationsHistoryList>
+      <div class="footer-container ">
+        <Button></Button>
+      </div>
     </div>
-  </div>);
+  );
 }
-
 
 export default DonationsHistory;

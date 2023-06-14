@@ -1,8 +1,8 @@
 import './NumSmall.css';
 
 
-function NumSmall (){
-    return (<p>currenySymbolnumber</p>)
+function NumSmall (props){
+    return (<p>{props.number}</p>)
 }
 
 
