@@ -81,9 +81,8 @@ function App() {
       <SideBar></SideBar>
       <div className="main-content">
         <div className="date"></div>
-        <div className="top-container">
           <Header></Header>
-        </div>
+        
         <div className="bottom-container">
           <div className="bottom-container__left">
             <TotalIncome></TotalIncome>

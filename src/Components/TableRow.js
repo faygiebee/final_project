@@ -19,8 +19,8 @@ function TableRow(props) {
         <td>
           <NumSmall number={props.object.amount}></NumSmall>
         </td>
-        <td>
-          <BulletPoint class={props.object.company}></BulletPoint>
+        <td className="flex">
+         <BulletPoint class={props.object.comment}></BulletPoint> 
           {props.object.comment}
         </td>
       </tr>

@@ -1,0 +1,91 @@
+The Ma'aser App
+Keep all buttons in useState, so onClick State will update each Button with Bool= true.
+
+if Button == true, page will rerender, only bottom-container.
+
+
+= useStates = 
+
+--Buttons --
+
+Dashboard
+Income 
+Donations
+Inbox
+Settings
+Logout
+
+--arrays--
+Income 
+History 
+
+
+= useRef =
+
+--Array--
+DonationsByCategory
+
+--numbers--
+TotalIncome
+Percentage/comment of Income 
+TotalDonations 
+Percentage/comment of Donations 
+
+
+
+
+
+= Buttons =
+--Dashboard--
+Income 
+Donations
+Inbox
+Settings
+Logout
+
+Date
+Go
+Logout
+See More_History
+See More_Income
+
+
+DashBoard
+
+SearchByDate - Keep Date in state, onChange Information is accepted onClick of Go State is updated(prop  is passed up).
+LogOut - Takes to a logOut page.
+Donate - takes to the Donations Page - Page has to refresh;
+SeeMore_Donations - Takes to the Donations Page - Page has to refresh;
+SeeMore_Income - Takes to the Income page - Page has to refresh;
+
+
+
+Income - Takes to Income Page. 
+Shows the Income History.
+When a new income is added IncomeHistoryArray in state is updated and page is refreshed.
+TotalInccome is updated and percentage comment is updated - these are both Refs.
+How is this working, does income need to be added manually or does it happen alone???
+If it happens manually there needs to be a form field to submit the info.
+
+
+Donations - Takes to Donations Page.
+Shows the Donations History.
+When a new Donation is added state is updated and page is refreshed.
+TotalDonations is updated and percentage comment is updated - these are both Refs.
+DonationsByCategoryArr is updated and OverallDonations amount (this is not in ref (This is a function and will automatically work out the amount every time the Array is updated.) Your Ma'aser balance will also be updated (this is an object- not a ref, and will also be worked out every time the donationsArr is updated.
+
+Second part of the page has the option to Donate which takes  to the Outer link to donate.
+Does this have a form to fill in to add donations that have been made outside this site??
+
+
+Inbox
+??
+
+Settings - Takes to Settings Pages
+What settings are there other than changing from 10% to 5%.
+
+
+
+Logout - Takes to LogOut page.
+
+

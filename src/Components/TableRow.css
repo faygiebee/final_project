@@ -10,4 +10,10 @@ tr > td {
     align-items: center;
     gap: 9px;
   }
-  
+  td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+.flex{
+  display: flex;
+}

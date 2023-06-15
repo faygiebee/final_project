@@ -2,7 +2,7 @@ import './NumSmall.css';
 
 
 function NumSmall (props){
-    return (<p>{props.number}</p>)
+    return (<span>{props.number}</span>)
 }
 
 

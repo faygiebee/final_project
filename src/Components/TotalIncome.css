@@ -40,10 +40,8 @@
     color: #90a3bf;
   }
 
-  .total-box p,
-  .box p {
-    font-size: 14px;
-  }
+  
+  
   @media (max-width: 900px) {
     .total-box {
       flex-direction: column;

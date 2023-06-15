@@ -1,18 +1,33 @@
 
-.helpingThePoor {
-  color: "#ffacc8";
+.label__color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
   margin-right: 8px;
+}
+.first {
+  background: #eb7ca6;
 }
 
-.torahInstitutions {
-  color: #7c5cfc;
-  margin-right: 8px;
+.second {
+  background: #ffacc8;
 }
-.hachnassasKallah {
-  color: #eb7ca6;
-  margin-right: 8px;
+
+.third {
+  background: #cc6ff8;
 }
-.medicalInstitutions{
-  color: #cc6ff8;
-  margin-right: 8px;
+
+.fourth {
+  background: #7c5cfc;
 }
+
+.fifth {
+  background: #5caffc;
+}
+
+.sixth {
+  background: #a1a9fe;
+}
+
+
+

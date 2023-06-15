@@ -3,15 +3,14 @@ import "./DonationsListItem.css";
 import NumSmall from "./NumSmall";
 
 function DonationsListItem(props) {
- 
+  console.log("DonationsListItem" + props.amount);
   return (
     <div className="pie-chart__labels-item">
       <div class="label">
-      <BulletPoint class={props.charity}></BulletPoint>
-        <div class={"label__color second"}> </div>
+        <BulletPoint class={props.charity}></BulletPoint>
         <p>{props.charity}</p>
       </div>
-      <NumSmall amount={props.amount}></NumSmall>
+      <NumSmall number={props.number}></NumSmall>
     </div>
   );
 }

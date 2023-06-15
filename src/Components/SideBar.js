@@ -8,7 +8,7 @@ function SideBar() {
     "Donations",
     "Inbox",
     "Settings",
-    "logout",
+    "Logout",
   ];
   
   return (

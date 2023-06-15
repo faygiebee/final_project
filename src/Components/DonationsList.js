@@ -3,13 +3,15 @@ import DonationsListItem from "./DonationsListItem";
 
 function DonationsList(props) {
   console.log(props.donations);
+
   return (
     <>
       {props.donations.map(function (donation) {
         return (
           <DonationsListItem
             charity={donation.charity}
-            amount={donation.amount}
+            
+            number={donation.number}
           ></DonationsListItem>
         );
       })}
