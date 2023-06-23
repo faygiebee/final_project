@@ -1,10 +1,12 @@
 import "./PurpleButton.css";
 import Icon from "./Icon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons";
 
 function PurpleButton() {
   return (
     <button class="btn btn-purple">
-      <Icon></Icon>
+      <FontAwesomeIcon icon={faCircleDollarToSlot} />
       <span>Donate</span>
     </button>
   );

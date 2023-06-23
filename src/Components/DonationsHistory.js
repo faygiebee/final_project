@@ -6,8 +6,6 @@ import Button from "./Button";
 
 function DonationsHistory(props) {
 
-  console.log("Inside Donations History");
-  console.log(props.history);
  
   return (
     <div className=" box transaction-box">

@@ -3,9 +3,6 @@ import Table from "./Table";
 
 function DonationsHistoryList(props) {
     
-    console.log("inside donations history list");
-    console.log(props.history);
- 
   return (
     <div className="transaction-history">
       <Table

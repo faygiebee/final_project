@@ -1,7 +1,7 @@
-import './Icon.css'
+import "./Icon.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-function Icon(){
- return (<p></p>);
+function Icon(props) {
+  return <FontAwesomeIcon icon={props.icon} />;
 }
 export default Icon;

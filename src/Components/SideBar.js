@@ -1,14 +1,21 @@
 import NavBar from "./NavBar";
 import "./SideBar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightDots } from "@fortawesome/free-solid-svg-icons";
+import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons";
+import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
-function SideBar() {
+function SideBar(props) {
   const navButton = [
-    "Dashboard",
-    "Income",
-    "Donations",
-    "Inbox",
-    "Settings",
-    "Logout",
+    {name:"Dashboard",icon:faHouse },
+    {name:"Income",icon:faArrowUpRightDots},
+    {name:"Donations",icon:faCircleDollarToSlot},
+    {name:"Inbox",icon:faComment},
+    {name:"Settings",icon:faGear},
+    {name:"Logout",icon:faRightFromBracket}
   ];
   
   return (
@@ -20,11 +27,10 @@ function SideBar() {
 
         <ul className="side-nav">
           {navButton.map(function (button) {
-            return <NavBar button={button}></NavBar>;
+            return <NavBar page={props.page} icon ={button.icon} name={button.name}></NavBar>;
           })}
         </ul>
         <ul>
-          <NavBar className='last-item"'></NavBar>
         </ul>
       </div>
     </nav>

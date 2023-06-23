@@ -4,10 +4,6 @@ import "./TableRow.css";
 import Icon from "./Icon";
 
 function TableRow(props) {
-  console.log("in tableRow");
-  console.log(props.object);
-  // const item = props.item;
-
   return (
     <tbody>
       <tr>

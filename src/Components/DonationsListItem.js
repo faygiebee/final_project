@@ -3,7 +3,6 @@ import "./DonationsListItem.css";
 import NumSmall from "./NumSmall";
 
 function DonationsListItem(props) {
-  console.log("DonationsListItem" + props.amount);
   return (
     <div className="pie-chart__labels-item">
       <div class="label">
