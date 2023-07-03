@@ -2,15 +2,17 @@ import "./App.css";
 import Header from "./Components/Header";
 import SideBar from "./Components/SideBar";
 import { useState } from "react";
-import Dashboard from "./Dashboard";
-import InboxPage from "./InboxPage";
+import Dashboard from "./Components/Dashboard";
+import InboxPage from "./Components/InboxPage";
 import SettingsPage from "./SettingsPage";
-import DonationsPage from "./DonationsPage";
-import IncomePage from "./IncomePage";
+import DonationsPage from "./Components/DonationsPage";
+import IncomePage from "./Components/IncomePage";
 import LogOutPage from "./Components/LogOutPage";
 
 function App() {
   const [page, updatePage] = useState();
+
+  let pageToReturn;
 
   function UpdatePage(page) {
     updatePage(page);
@@ -80,14 +82,45 @@ function App() {
       return [...prev, obj];
     });
   }
+  switch (page) {
+    case "Inbox":
+      pageToReturn = <InboxPage></InboxPage>;
+      break;
+    case "Donations":
+      pageToReturn = <DonationsPage  donationHistory={DonationHistory} donation={UpdateDonations}></DonationsPage>;
+      break;
+
+    case "Income":
+      pageToReturn = <IncomePage 
+      incomeHistory={IncomeHistory} income={UpdateIncome}></IncomePage>;
+      break;
+
+    case "Settings":
+      pageToReturn = <SettingsPage></SettingsPage>;
+      break;
+
+    case "Logout":
+      pageToReturn = <LogOutPage></LogOutPage>;
+      break;
+
+    default:
+      pageToReturn = (
+        <Dashboard
+          incomeHistory={IncomeHistory}
+          donationHistory={DonationHistory}
+        ></Dashboard>
+      );
+      break;
+  }
+  
 
   return (
     <div className="container">
       <SideBar page={UpdatePage}></SideBar>
       <div className="main-content">
-        <div className="date"></div>
+        <div className=""></div>
         <Header></Header>
-        <SettingsPage></SettingsPage>
+        {pageToReturn}
       </div>
     </div>
   );
@@ -95,27 +128,5 @@ function App() {
 
 export default App;
 /*
-        {() => {
-          switch (page) {
-            case "Inbox":
-              return <InboxPage></InboxPage>;
-
-            case "Donations":
-              return <DonationsPage></DonationsPage>;
-
-            case "Income":
-              return <IncomePage></IncomePage>;
-
-            case "Settings":
-              return <SettingsPage></SettingsPage>;
-            case "Logout":
-              return <LogOutPage></LogOutPage>;
-            default:
-              return (
-                <Dashboard
-                  incomeHistory={IncomeHistory}
-                  donationHistory={DonationHistory}
-                ></Dashboard>
-              );
-          }
+       
         }}*/

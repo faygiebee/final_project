@@ -1,8 +1,8 @@
 import "./Dashboard.css";
-import TotalIncome from "./Components/TotalIncome";
-import DonationsHistory from "./Components/DonationsHistory";
-import MaaserBalance from "./Components/MaaserBalance";
-import DonationsByCategory from "./Components/DonationsByCategory";
+import TotalIncome from "./TotalIncome";
+import DonationsHistory from "./DonationsHistory";
+import MaaserBalance from "./MaaserBalance";
+import DonationsByCategory from "./DonationsByCategory";
 
 function Dashboard(props) {
   return (

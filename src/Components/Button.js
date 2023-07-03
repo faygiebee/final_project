@@ -1,10 +1,10 @@
 import './Button.css';
 import './Icon.js';
 
-function Button(){
+function Button(props){
     return (<>
 <div className='btn btn-white'>
-    See More...
+    {props.name}
     </div>
     </>);
 }

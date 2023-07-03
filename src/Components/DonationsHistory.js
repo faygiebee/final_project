@@ -16,7 +16,7 @@ function DonationsHistory(props) {
         history={props.history}
       ></DonationsHistoryList>
       <div class="footer-container ">
-        <Button></Button>
+        <Button name={"See More"}></Button>
       </div>
     </div>
   );

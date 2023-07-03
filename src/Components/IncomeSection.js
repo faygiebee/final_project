@@ -7,7 +7,7 @@ import Comment from "./Comment";
 function IncomeSection(props) {
   return (
     <>
-      <div className="flex">
+      <div className="flexIncome">
         <SubTitle title={props.title}></SubTitle>
         <Icon icon={props.icon}></Icon>
       </div>
