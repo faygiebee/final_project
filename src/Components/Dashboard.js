@@ -15,12 +15,14 @@ function Dashboard(props) {
             title={"Donations History"}
             title1={"Donations"}
             title2={"Category"}
+            page={props.page}
           ></DonationsHistory>
           <DonationsHistory
             history={props.incomeHistory}
             title={"Income History"}
             title1={"Company"}
             title2={"Exempt from Ma'aser"}
+            page={props.page}
           ></DonationsHistory>
         </div>
         <div className="bottom-container__right">

@@ -12,7 +12,16 @@ function Table(props) {
         title2={props.title2}
       ></TableTitleRow>
       {newArr.map(function (item) {
-        return <TableRow object={item}></TableRow>;
+        return (
+          <TableRow
+            Edit={props.Edit}
+            IncomeDonation={props.IncomeDonation}
+            DeleteDonation={props.DeleteDonation}
+            object={item}
+            page={props.page}
+            Object={props.object}
+          ></TableRow>
+        );
       })}
     </table>
   );

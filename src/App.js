@@ -10,7 +10,7 @@ import IncomePage from "./Components/IncomePage";
 import LogOutPage from "./Components/LogOutPage";
 
 function App() {
-  const [page, updatePage] = useState();
+  const [page, updatePage] = useState("Dashboard");
 
   let pageToReturn;
 
@@ -20,26 +20,26 @@ function App() {
   const [DonationHistory, UpdateDonationsHistory] = useState([
     {
       key: 1,
-      id: "Yad Eliezer",
+      id: 1,
       company: "Yad Eliezer",
-      date: " Jan 01,2023",
-      amount: "$2,000.00",
+      date: "2023-01-01",
+      amount: "2000",
       comment: "Helping the Poor",
     },
     {
       key: 2,
-      id: "Kollel Kever Rochel",
+      id: 2,
       company: "Kollel Kever Rochel",
-      date: " Jan 04,2022",
-      amount: "$2,000.00",
+      date: "2022-01-04",
+      amount: "2000",
       comment: "Torah Institutions",
     },
     {
       key: 3,
-      id: "Likrat Kallah",
+      id: 3,
       company: "Likrat Kallah",
-      date: " Jan 06,2023",
-      amount: "$2,000.00",
+      date: "2023-01-06",
+      amount: "2000",
       comment: "Hachnasas Kallah",
     },
   ]);
@@ -47,30 +47,39 @@ function App() {
   const [IncomeHistory, UpdateIncomeHistory] = useState([
     {
       key: 1,
-      id: "Compuskills",
+      id: 1,
       company: "Compuskills",
-      date: " Jan 01,2023",
-      amount: "$2,000.00",
+      date: "2023-01-01",
+      amount: "2,000",
       comment: "Yes",
     },
     {
       key: 2,
-      id: "Ner Tzaddik",
+      id: 2,
       company: "Ner Tzaddik",
-      date: " Jan 04,2022",
-      amount: "$2,000.00",
+      date: "2022-01-04",
+      amount: "2,000",
       comment: "No",
     },
     {
       key: 3,
-      id: "4ugifts",
+      id: 3,
       company: "4ugifts",
-      date: " Jan 06,2023",
-      amount: "$2,000.00",
+      date: "2023-06-01",
+      amount: "2,000",
       comment: "No",
     },
   ]);
 
+  function DeleteDonation(obj){
+    UpdateDonationsHistory(function (prev) {
+      return prev.filter(function(value){return value.id!==obj});})
+  }
+ //Delete Income//
+  function IncomeDonation(obj){
+    UpdateIncomeHistory(function (prev) {
+      return prev.filter(function(value){return value.id!==obj});})
+  }
   function UpdateDonations(obj) {
     UpdateDonationsHistory(function (prev) {
       return [...prev, obj];
@@ -87,12 +96,26 @@ function App() {
       pageToReturn = <InboxPage></InboxPage>;
       break;
     case "Donations":
-      pageToReturn = <DonationsPage  donationHistory={DonationHistory} donation={UpdateDonations}></DonationsPage>;
+      pageToReturn = (
+        <DonationsPage
+          donationHistory={DonationHistory}
+          donation={UpdateDonations}
+          page={page}
+        DeleteDonation={DeleteDonation}
+        ></DonationsPage>
+      );
       break;
 
     case "Income":
-      pageToReturn = <IncomePage 
-      incomeHistory={IncomeHistory} income={UpdateIncome}></IncomePage>;
+      pageToReturn = (
+        <IncomePage
+          incomeHistory={IncomeHistory}
+          income={UpdateIncome}
+          page={page}
+          IncomeDonation={IncomeDonation}
+        ></IncomePage>
+      );
+
       break;
 
     case "Settings":
@@ -108,11 +131,11 @@ function App() {
         <Dashboard
           incomeHistory={IncomeHistory}
           donationHistory={DonationHistory}
+          page={page}
         ></Dashboard>
       );
       break;
   }
-  
 
   return (
     <div className="container">

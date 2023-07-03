@@ -11,6 +11,8 @@ function IncomePage(props) {
           title={"Income History"}
           title1={"Company"}
           title2={"Exempt from Ma'aser"}
+          page={props.page}
+          IncomeDonation={props.IncomeDonation}
         ></DonationsHistory>
       </div>
       <Form income={props.income}></Form>

@@ -9,6 +9,11 @@ function DonationsHistoryList(props) {
         title1={props.title1}
         title2={props.title2}
         history={props.history}
+        page={props.page}
+        DeleteDonation={props.DeleteDonation}
+        IncomeDonation={props.IncomeDonation}
+        Edit={props.Edit}
+        object={props.object}
       ></Table>
     </div>
   );
