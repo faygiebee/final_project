@@ -23,7 +23,7 @@ function App() {
       id: 1,
       company: "Yad Eliezer",
       date: "2023-01-01",
-      amount: "2000",
+      amount: 2000,
       comment: "Helping the Poor",
     },
     {
@@ -31,7 +31,7 @@ function App() {
       id: 2,
       company: "Kollel Kever Rochel",
       date: "2022-01-04",
-      amount: "2000",
+      amount: 2000,
       comment: "Torah Institutions",
     },
     {
@@ -39,7 +39,7 @@ function App() {
       id: 3,
       company: "Likrat Kallah",
       date: "2023-01-06",
-      amount: "2000",
+      amount: 2000,
       comment: "Hachnasas Kallah",
     },
   ]);
@@ -50,7 +50,7 @@ function App() {
       id: 1,
       company: "Compuskills",
       date: "2023-01-01",
-      amount: "2,000",
+      amount: 2000,
       comment: "Yes",
     },
     {
@@ -58,7 +58,7 @@ function App() {
       id: 2,
       company: "Ner Tzaddik",
       date: "2022-01-04",
-      amount: "2,000",
+      amount: 2000,
       comment: "No",
     },
     {
@@ -66,7 +66,7 @@ function App() {
       id: 3,
       company: "4ugifts",
       date: "2023-06-01",
-      amount: "2,000",
+      amount: 2000,
       comment: "No",
     },
   ]);
@@ -76,7 +76,7 @@ function App() {
       return prev.filter(function(value){return value.id!==obj});})
   }
  //Delete Income//
-  function IncomeDonation(obj){
+  function DeleteDonation(obj){
     UpdateIncomeHistory(function (prev) {
       return prev.filter(function(value){return value.id!==obj});})
   }
@@ -112,7 +112,8 @@ function App() {
           incomeHistory={IncomeHistory}
           income={UpdateIncome}
           page={page}
-          IncomeDonation={IncomeDonation}
+          donation={DonationHistory}
+          deleteDonation={DeleteDonation}
         ></IncomePage>
       );
 

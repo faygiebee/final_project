@@ -17,4 +17,5 @@ tr > td {
 .flex{
   display: flex;
   justify-content: left;
+  align-items: center;
 }

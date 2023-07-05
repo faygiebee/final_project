@@ -18,7 +18,7 @@ function DonationsHistory(props) {
         history={props.history}
         page={props.page}
         DeleteDonation={props.DeleteDonation}
-        IncomeDonation={props.IncomeDonation}
+        deleteDonation={props.deleteDonation}
         Edit={props.Edit}
         object={props.object}
       ></DonationsHistoryList>

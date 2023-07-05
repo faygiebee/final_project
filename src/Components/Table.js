@@ -15,7 +15,7 @@ function Table(props) {
         return (
           <TableRow
             Edit={props.Edit}
-            IncomeDonation={props.IncomeDonation}
+            deleteDonation={props.deleteDonation}
             DeleteDonation={props.DeleteDonation}
             object={item}
             page={props.page}

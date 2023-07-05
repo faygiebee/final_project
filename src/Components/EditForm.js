@@ -13,22 +13,25 @@ function EditForm(props) {
   let Key = useRef(4);
   let item=props.Object;
   console.log(page);
-
-  function CompanyHandler(e) {
+  let comp=item.company;
+console.log("In edit form");
+  function CompanyHandler(e) {/*
+    
     company.current = e.target.value;
-    console.log(company);
+    console.log(company);*/
   }
   function DateHandler(e) {
     Date.current = e.target.value;
     console.log(Date);
   }
+
   function AmountHandler(e) {
     Amount.current = e.target.value;
-    console.log(Amount);
-  }
+    console.log(Amount);  }
+    
   function MaaserHandler(e) {
     console.log("Maaser" + typeof e.target.value);
-    e.target.value == "on" ? (Maaser.current = "Yes") : (Maaser.current = "No");
+    e.target.value = "on" ? (Maaser.current == "Yes") : (Maaser.current == "No");
     console.log(Maaser);
   }
 
@@ -43,12 +46,11 @@ function EditForm(props) {
       amount: Amount.current,
       comment: Maaser.current,
     };
-    props.income(newIncome);
+    //props.income(newIncome);
     console.log("newIncome" + newIncome.company);
   }
   function DonationSubmitHandler(e) {
     e.preventDefault();
-    Key.current++;
     item = {
       key:item.key,
       id:item.key,
@@ -59,15 +61,15 @@ function EditForm(props) {
     };
     
     props.donation(item);
-    //props.DeleteDonation(item.id);
+    props.DeleteDonation(item.id);
     console.log("newIncome" + newIncome.company);
   }
   
   return (
     <>
       <form className="box" action="" method="" name="">
-      <div className="formRow"><label forhtml="company">Edit Form</label>
-        <input className="formInput" value={item.company} onChange={CompanyHandler} type="text" name="company"></input></div>
+      <div className="formRow"><label forhtml="company">Edit Transaction</label>
+        <input className="formInput" value={comp} onChange={CompanyHandler} type="text" name="company"></input></div>
         <div className="formRow"> <label forhtml="Date">Date Received</label>
         <input className="formInput" value={item.date} onChange={DateHandler} type="date" name="Date"></input></div>
         <div className="formRow"><label forhtml="Amount">Amount Received</label>

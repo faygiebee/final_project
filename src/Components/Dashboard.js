@@ -9,7 +9,7 @@ function Dashboard(props) {
     <>
       <div className="bottom-container">
         <div className="bottom-container__left">
-          <TotalIncome></TotalIncome>
+          <TotalIncome incomeHistory={props.incomeHistory} donationHistory={props.donationHistory}></TotalIncome>
           <DonationsHistory
             history={props.donationHistory}
             title={"Donations History"}
@@ -26,7 +26,9 @@ function Dashboard(props) {
           ></DonationsHistory>
         </div>
         <div className="bottom-container__right">
-          <MaaserBalance></MaaserBalance>
+          <MaaserBalance 
+         title={"Income History"}
+          donationHistory={props.donationHistory}></MaaserBalance>
           <DonationsByCategory></DonationsByCategory>
         </div>
       </div>

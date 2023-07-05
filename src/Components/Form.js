@@ -11,7 +11,6 @@ function Form(props) {
   const Submit = useRef();
   let newIncome;
   let Key = useRef(4);
-  console.log("ini Form");
   console.log(page);
 
   function CompanyHandler(e) {
@@ -23,13 +22,12 @@ function Form(props) {
     console.log(Date);
   }
   function AmountHandler(e) {
-    Amount.current = e.target.value;
-    console.log(Amount);
+    Amount.current = e.target.value;;
   }
   function MaaserHandler(e) {
-    console.log("Maaser" + typeof e.target.value);
-    e.target.value == "on" ? (Maaser.current = "Yes") : (Maaser.current = "No");
-    console.log(Maaser);
+    console.log("Maaser " + e.target.checked);
+    Maaser.current = e.target.checked==true ? "Yes" :"No";
+    console.log(Maaser.current);
   }
 
   function IncomeSubmitHandler(e) {
@@ -40,7 +38,7 @@ function Form(props) {
       id:Key.current,
       company: Income.current,
       date: Date.current,
-      amount: Amount.current,
+      amount: ((Number)(Amount.current)),
       comment: Maaser.current,
     };
     props.income(newIncome);
@@ -71,8 +69,8 @@ function Form(props) {
         <input className="formInput" onChange={DateHandler} type="date" name="Date"></input></div>
         <div className="formRow"><label forhtml="Amount">Amount Received</label>
         <input className="formInput" onChange={AmountHandler} type="number" name="Amount"></input></div>
-        <div className="exempt"><div className=""><label forhtml="Maaser">Exempt from Maaser</label></div>
-        <input className="formInput"  onChange={MaaserHandler} type="checkbox" name="Maaser"></input></div>
+        {page=="Income" && <div className="exempt"><div className=""><label forhtml="Maaser">Exempt from Maaser</label></div>
+        <input className="formInput"  onClick={MaaserHandler} type="checkbox" name="Maaser"></input></div>}
         {page=="Donations"&& <input type="select"></input>}
         <label forhtml="Submit"></label>
         <div className=""> <input className= " btn btn-white" onClick={page=="Income"? IncomeSubmitHandler:DonationSubmitHandler} type="submit" name="Submit"></input>

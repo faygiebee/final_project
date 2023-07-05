@@ -18,7 +18,7 @@ function TableRow(props) {
   function EditIncomeHandler (){
   } 
   function DeleteIncomeHandler (e){
-  props.IncomeDonation(props.object.id)
+  props.deleteDonation(props.object.id)
   }
 
   let page=props.page;
